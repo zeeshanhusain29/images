@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Images</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .user-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Sample JSON array with 25 image URLs
+    const imageArray = [
+      {"image": "url1.jpg"},
+      {"image": "url2.jpg"},
+      {"image": "url3.jpg"},
+      {"image": "url4.jpg"},
+      {"image": "url5.jpg"},
+      {"image": "url6.jpg"},
+      {"image": "url7.jpg"},
+      {"image": "url8.jpg"},
+      {"image": "url9.jpg"},
+      {"image": "url10.jpg"},
+      {"image": "url11.jpg"},
+      {"image": "url12.jpg"},
+      {"image": "url13.jpg"},
+      {"image": "url14.jpg"},
+      {"image": "url15.jpg"},
+      {"image": "url16.jpg"},
+      {"image": "url17.jpg"},
+      {"image": "url18.jpg"},
+      {"image": "url19.jpg"},
+      {"image": "url20.jpg"},
+      {"image": "url21.jpg"},
+      {"image": "url22.jpg"},
+      {"image": "url23.jpg"},
+      {"image": "url24.jpg"},
+      {"image": "url25.jpg"}
+    ];
+
+    // Function to load images dynamically
+    function loadImages() {
+      const container = document.body;
+
+      imageArray.forEach(item => {
+        const imgElement = document.createElement('img');
+        imgElement.src = item.image;
+        imgElement.alt = 'User Image';
+        imgElement.classList.add('user-image');
+
+        // You can add additional attributes or event listeners if needed
+
+        container.appendChild(imgElement);
+      });
+    }
+
+    // Call the function to load images
+    loadImages();
+  </script>
+
+</body>
+</html>
